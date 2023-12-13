@@ -1,0 +1,91 @@
+<!-- 
+  Description - Display the NEW Dashboard creation Screen
+  This file shows the following Priority Numbers
+  
+  1 -> The line production information display area has 9 rows x 12 columns of invisible partitions. Display items (tiles) can be freely placed in this area in the new creation/edit display mode.
+  2 -> Display a "+" button for adding tiles to the right of each tile item display.
+  3 -> When the "+" button is pressed, a tile is added to the upper left arrangement in the line production information display area. The tiles are added while the panel for adding tiles remains displayed.
+  4 -> When a tile is added to the line production information display area, it is displayed in a state where it is possible to edit the tile and adjust the tile arrangement and size. At the top right of each tile, display the tile setting and tile non-display buttons.
+  5 -> When adding a tile while tiles have already been added to the line production information display area, if there is space to the right of the existing tile, it will be added to the right.
+  6 -> It is added from the upper left position to the right side, and if there is insufficient space on the right side, it is added to the position where there is space in the lower part.
+  7 -> The contents of the tiles set in the target preset are displayed in a state in which it is possible to edit the tiles, arrange the tiles, and adjust the size of the tiles.
+  8 -> Depending on the remaining space in the screen, tiles can be added to the line production information display area from the "Add Tile" button in the title area. At the top right of each tile, display the tile setting and tile non-display buttons.
+  9 -> Hidden tiles can be re-added from the Add Tile panel.
+  10-> If the line production information display area does not have enough space to add tiles, and the warning button is pressed, the tiles will be added to the line production information display area, but the characters may become smaller or cut off. 
+  11-> In the new creation/edit display mode, the layout can be changed by dragging the tiles. * Depending on the remaining space on the screen, tiles of different sizes may not be rearranged.
+  12-> By dragging the edge of the tile, it is possible to enlarge or reduce the size of the tile.
+  15-> Every graph has close and gear icon on upper right  Corner
+  16-> You can add/delete tiles, set each tile, and change the placement position and size.
+  17 -> Production Progress Graph is being dispayed on screen
+  19 -> Display the screen content according to the depending mode. 
+  20 -> Add 41 defined tile name with size and a "+" button on the right into the left side bar that will be open on clicking "Add Tile" Button.
+ -->
+
+
+ <!doctype html>
+ <html>
+ <head>
+     <link rel="stylesheet" type="text/css" href="assets/less/demo.less">
+     <link rel="stylesheet" type="text/css" href="../dist/jquery.dsmorse-gridster.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="../dist/jquery.dsmorse-gridster.min.js" type="text/javascript" charset="utf-8"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="new.css">
+     <link rel="stylesheet" href="ProgressBar.css">
+     <link rel="stylesheet" href="ProgressChart.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ </head>
+
+<body style="height: 100%;width: 100%;">
+<div class="root-div">
+  <!-- sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block sidepanel" >
+    <div class="availability-heading">
+        <h3 class="w3-bar-item">Available Tiles</h3>
+        <button class="close-btn" style="margin:20px; max-height: 50px;"><i class="fa fa-angle-left close-btn"></i></button>
+    </div>
+    
+    </div>
+    <!-- page-content -->
+<div>
+  <div style="height: 10%;width:100%">
+      <nav class="horizontal-nav">
+                  
+        <div style="display:flex; align-items: center; width: 100%;">
+          <button class="add-tile" style="margin-left: 10px; max-height:50px;"><i class="fa fa-angle-right"></i>Add Tile</button>
+        <div style="margin-left: 20%;"><h3>DP</h3></div>
+        <div style="margin-left:20%" >
+        
+            <div style="display: flex; margin-left: 100%;">
+            <button class="reset-btn" style="max-height: 10%;display: flex; align-items: center; "><i class="fa fa-undo right-align"></i> Reset</button>
+            <button class="cancel-btn" style="max-height: 10%;display: flex; align-items: center; " ><i class="fa fa-times right-align"></i>  Cancel</button>
+            <button class="save-btn" style="max-height: 10%;display: flex; align-items: center; "><i class="fa fa-save right-align"></i>  Save</button>
+              </div>
+        </div>
+    </div>
+      </nav>
+
+
+    </div>
+
+
+    <div id="gridster-container" style="height: 90%;width:100%">
+        <div id="grid" style="width: 100%;position: fixed;height: 100%;">
+        </div>
+
+    </div>
+
+  </div>
+    
+  </div>
+
+      <script type="text/javascript" src="New.js"></script>
+      
+  </body>
+
+  </html>

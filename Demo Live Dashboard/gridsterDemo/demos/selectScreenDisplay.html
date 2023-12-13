@@ -1,0 +1,91 @@
+
+<!-- 
+  Description - Display the Initial Screen
+  This file shows the Priority Numbers
+  19 -> Display the screen content according to the depending mode. 
+ -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="assets/less/demo.less" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../dist/jquery.dsmorse-gridster.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script
+      src="../dist/jquery.dsmorse-gridster.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="root-div">
+      <!-- page-content -->
+
+      <div>
+        <div>
+          <nav class="horizontal-nav">
+            <div style="display: flex; align-items: center; width: 100%">
+              <div style="margin-left: 10%">
+                <span><h1>Line Monitor</h1></span>
+              </div>
+              <div style="margin-left: 10%"><h3>DP</h3></div>
+              <div style="margin-left: 20%">
+                <div class="screen-dropdown">
+                  <button class="screen-dropbtn" style="font-size: x-large">
+                    Select Screen <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div id="screenDropdown" class="screen-dropdown-content" style="background-color: #f1f1f1">
+                    <button style="height: 50px; width: 100%">
+                      <a
+                        class="display-btn"
+                        style="color: black; height: 50px"
+                        href="OEEScreen.html"
+                        >OEE Screen</a
+                      >
+                    </button>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn" style="font-size: x-large">
+                    <i class="fa fa-edit"></i> <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a
+                      id="new"
+                      href="New.html"
+                      >New</a
+                    >
+                    <a id="edit" href="#about">Edit</a> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="parent-div">
+        <div style="align-items: center; text-align: center; background-color: #424242;color: white;display: inline-block;margin-top: 50px;">
+          <h1 style="margin: 10%;">
+            Please select a dashboard from the [Select Dashboard] menu.
+          </h1>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="selectScreenDisplay.js"></script>
+  </body>
+</html>

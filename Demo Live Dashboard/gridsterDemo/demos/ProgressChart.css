@@ -1,0 +1,88 @@
+
+.no-decoration:hover,
+.no-decoration:visited,
+.no-decoration:focus {
+  text-decoration: none;
+}
+
+.graph-header {
+}
+
+.graph-legend-item .line {
+  width: 30px;
+  height: 6px;
+}
+
+.graph-container {
+
+}
+
+.unit-label-wrap {
+  min-width: 0;
+  flex: 0 0;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.y-unit-label {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+.graph-wrap {
+  position: relative;
+}
+
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+  .graph .grid {
+    stroke-dasharray: 0;
+    stroke-width: 6;
+  }
+
+.hour-markers {
+  stroke-dasharray: 0;
+  stroke-width: 3;
+}
+
+.labels {
+  font-size: 20px;
+}
+
+.labels.medium {
+  font-size: 25px;
+}
+
+.labels.large {
+  font-size: 30px;
+}
+
+.plan, .actual {
+  stroke-width: 6;
+}
+
+.plan-guides, .actual-guides {
+  stroke-dasharray: 3 8;
+  stroke-width: 3;
+}
+
+.actual-time {
+  text-anchor: middle;
+}
+
+.actual-time-bg {
+  stroke-width: 0.7em;
+}
+
+.progress {
+  fill: none;
+  stroke-width: 6;
+}

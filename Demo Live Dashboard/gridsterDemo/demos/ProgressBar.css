@@ -1,0 +1,484 @@
+/* @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-material.css"; */
+.collapsible-btn {
+  position: absolute;
+  left: 5px;
+  width: 22px;
+  height: 22px;
+  top: 3px;
+  font-size: 18px;
+  padding: 0;
+}
+.ag-pinned-left-cols-container{
+  overflow:hidden;
+}
+.collapsible-btn span {
+  position: relative;
+  top: -7px;
+  width: 19px;
+  height: 25px;
+  display: inline-block;
+  font-weight: bold;
+}
+.special-row .ag-cell:not(:nth-child(1)), .special-row + .ag-row .ag-cell:not(:nth-child(1)) {
+  z-index: 1;
+}
+.special-row .ag-cell:nth-child(2) {
+  background-color: #424242;
+}
+.report-component .padding-lr-2 {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+.report-component .ag-cell-edit-wrapper input{
+  text-align:right;
+}
+.report-component .ag-body-viewport, .report-component .ag-floating-top {
+  border-right: 2px solid #e6e6e6;
+}
+.ag-theme-material .ag-header-cell:hover {
+  background-color: transparent !important;
+}
+.report-component .main-chart .apexcharts-legend {
+  right: 0px !important;
+  top: 10px !important;
+}
+.report-component .main-chart .apexcharts-toolbar {
+  top: 10px !important;
+}
+.report-component .ag-pinned-left-floating-top {
+  overflow: initial;
+  z-index: 10;
+}
+  .report-component .chart-title-component {
+  font-size: 0.8rem;
+  background: #424242;
+  border: 1px solid #e6e6e6;
+}
+
+  /*total value to be displayed in graph*/
+  .report-component .chart-title-component .title {
+    margin: auto;
+    position: absolute;
+    top: 45%;
+  }
+
+  /*total value to be displayed in graph*/
+  .report-component .chart-title-component .title-total {
+    margin: auto;
+    position: absolute;
+    top: 53%;
+    font-weight: bold;
+    padding: 0.1rem;
+  }
+
+  /*total value to be displayed in graph*/
+  .report-component .chart-title-component .title-totalPickRate {
+    margin-top: 0.5rem;
+  }
+
+.ag-body-viewport, .ag-pinned-left-floating-top, .ag-floating-top-container {
+  border-left: 2px solid #e6e6e6;
+}
+
+.report-component .chart-component {
+  background: #424242;
+  border: 1px solid #e6e6e6;
+}
+.highlight-lower-target {
+  background-color: #ffff00;
+  color: #ff0000 !important;
+}
+.highlight-lower-tolerance {
+  background-color: #ff0000 !important;
+  color: #fff!important;
+}
+.report-component .ag-theme-material .ag-cell, .report-component .ag-theme-material .ag-header-cell {
+  font-size: 0.73rem;
+  border-right: 2px solid #e6e6e6 !important;
+  border-left: 1px solid #e6e6e6 !important;
+  border-top: 2px solid #e6e6e6 !important;
+  line-height: 30px;
+  padding-left: 1px;
+  padding-right: 8px;
+  text-align: right;
+}
+  .report-component .ag-header {
+  border-top: 2px solid #e6e6e6 !important;
+  border-bottom: 0px solid #e6e6e6 !important;
+}
+.report-component .ag-theme-material .ag-row, .report-component .ag-body-viewport, .report-component .ag-header-cell, .report-component .ag-header {
+  background-color: #424242;
+}
+.report-component .ag-theme-material .ag-header {
+  height: 0px !important;
+  min-height: 0px !important;
+  border-top: 2px solid #e6e6e6 !important;
+}
+.report-component .ag-theme-material .ag-header-cell {
+  height: 35px !important;
+  border-left: 3px solid #e6e6e6 !important;
+}
+.ag-header-viewport .ag-header-cell-label {
+  display: inline-block;
+}
+.report-component .bold-heading {
+  font-weight: 600;
+}
+.report-component .ag-grid-size {
+  width: 100%;
+  height: 670px;
+}
+.report-component .ag-header .ag-header-cell-label {
+  color:#000;
+  font-weight: 100;
+}
+.report-component .ag-floating-top, .report-component .ag-horizontal-left-spacer {
+  overflow-y: auto;
+}
+.report-component .ag-header-cell-text {
+  color: white !important;
+}
+.report-component .ag-pinned-left-header .ag-header-cell {
+  padding-left: 55px;
+  border-left: 5px solid #e6e6e6 !important;
+}
+.ag-cell-inline-editing {
+  height: inherit!important;
+  padding-top: 15px;
+}
+/* You can add global styles to this file, and also import other style files */
+body {
+  color: #e6e6e6;
+  background-color: #696969;
+}
+
+  body:lang(en) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body:lang(ja) {
+    font-family: 'Meiryo UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body:lang(zh) {
+    font-family: 'Microsoft JhengHei', 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body:lang(ko) {
+    font-family: 'Malgun Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+/* responsive text sizes */
+/* xs */
+@media screen and (max-width: 575px) {
+  .h1, h1 {
+    font-size: 1.0em;
+  }
+
+  .h2, h2 {
+    font-size: 0.9em;
+  }
+
+  .h3, h3 {
+    font-size: 0.8em;
+  }
+
+  .h4, h4 {
+    font-size: 0.7em;
+  }
+
+  .h5, h5 {
+    font-size: 0.5em;
+  }
+
+  .h6, h6 {
+    font-size: 0.4em;
+  }
+}
+
+/* sm */
+@media screen and (min-width: 576px) {
+  .h1, h1 {
+    font-size: 1.2em;
+  }
+
+  .h2, h2 {
+    font-size: 1.1em;
+  }
+
+  .h3, h3 {
+    font-size: 1.0em;
+  }
+
+  .h4, h4 {
+    font-size: 0.9em;
+  }
+
+  .h5, h5 {
+    font-size: 0.75em;
+  }
+
+  .h6, h6 {
+    font-size: 0.6em;
+  }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+  .h1, h1 {
+    font-size: 1.5em;
+  }
+
+  .h2, h2 {
+    font-size: 1.35em;
+  }
+
+  .h3, h3 {
+    font-size: 1.2em;
+  }
+
+  .h4, h4 {
+    font-size: 1.0em;
+  }
+
+  .h5, h5 {
+    font-size: 0.9em;
+  }
+}
+
+/* lg */
+@media screen and (min-width: 992px) {
+  .h1, h1 {
+    font-size: 2.0em;
+  }
+
+  .h2, h2 {
+    font-size: 1.7em;
+  }
+
+  .h3, h3 {
+    font-size: 1.45em;
+  }
+
+  .h4, h4 {
+    font-size: 1.3em;
+  }
+
+  .h5, h5 {
+    font-size: 1.2em;
+  }
+
+  .h6, h6 {
+    font-size: 1.0em;
+  }
+}
+
+/* xlg */
+@media screen and (min-width: 1200px) {
+  .h1, h1 {
+    font-size: 2.5em;
+  }
+
+  .h2, h2 {
+    font-size: 2em;
+  }
+
+  .h3, h3 {
+    font-size: 1.6em;
+  }
+
+  .h4, h4 {
+    font-size: 1.5em;
+  }
+
+  .h5, h5 {
+    font-size: 1.2em;
+  }
+
+  .h6, h6 {
+    font-size: 1.0em;
+  }
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+/* grey1 */
+body, .bg-secondary, .bg-grey1, gridster {
+  background-color: #696969 !important;
+}
+
+.border-secondary, .border-grey1 {
+  border-color: #696969 !important;
+}
+
+/* grey2 */
+.bg-primary, .bg-grey2, gridster-item {
+  background-color: #404040 !important;
+}
+
+.btn-primary, .btn-bg-grey2 {
+  background-color: #404040 !important;
+  border-color: #404040 !important;
+}
+
+/* grey3 */
+.bg-grey3 {
+  background-color: #565656 !important;
+}
+
+/* grey4 */
+.bg-grey4 {
+  background-color: #898989 !important;
+}
+
+/* grey5 */
+.bg-grey5 {
+  background-color: #555555 !important;
+}
+
+/* white1 */
+body, .btn-primary, .btn-color-white1 {
+  color: #e6e6e6 !important;
+}
+
+.bg-light, .bg-white1 {
+  background-color: #e6e6e6 !important;
+}
+
+.text-fill-white1 {
+  fill: #e6e6e6;
+}
+
+.stroke-white1 {
+  stroke: #e6e6e6 !important;
+}
+
+/* white2 */
+.btn-light, .btn-bg-white2 {
+  background-color: #ffffff !important;
+}
+
+.btn-light, .btn-border-white2 {
+  border-color: #ffffff !important;
+}
+
+/* black1 */
+.btn-light, .btn-color-black1, .text-dark, .text-black1 {
+  color: #333333 !important;
+}
+
+.bg-dark, .bg-black1 {
+  background-color: #333333 !important;
+}
+
+/* green1 */
+.bg-success, .bg-green1 {
+  background-color: #00b050 !important;
+}
+
+.text-success, .text-green1 {
+  color: #00b050 !important;
+}
+
+.stroke-green1 .bar {
+  stroke: #00b050 !important;
+}
+
+/* yellow1 */
+.bg-warning, .bg-yellow1 {
+  background-color: #c0b320 !important;
+}
+
+.text-warning, .text-yellow1 {
+  color: #c0b320 !important;
+}
+
+.stroke-yellow1 .bar {
+  stroke: #c0b320;
+}
+
+/* yellow2 */
+.bg-warning-2, .bg-yellow2 {
+  background-color: #edc948;
+}
+
+.text-warning-2, .text-yellow2 {
+  color: #edc948;
+}
+
+/* red1 */
+.bg-danger, .bg-red1 {
+  background-color: #f28e2b;
+}
+
+.text-danger, .text-red1 {
+  color: #f28e2b;
+}
+
+.stroke-red1 .bar {
+  stroke: #f28e2b;
+}
+
+/* red2 */
+.bg-danger-2, .bg-red2 {
+  background-color: #e15759;
+}
+
+.text-danger-2, .text-red2 {
+  color: #e15759;
+}
+
+/* red3 */
+.bg-red3 {
+  background-color: #ff0000;
+}
+
+.bs-datepicker-head 
+{
+  background-color: #404040f0 !important;
+  border-radius: 0px 0px 0px 0px !important;  
+}
+
+.bs-datepicker-body
+{
+  background-color: #5f5f5fde !important;
+  border: none !important;
+  border-radius: 0px 0px 0px 0px !important; 
+}
+
+.bs-datepicker-body table td
+{
+  color: #fff !important;
+  font-family: inherit !important; 
+}
+
+.theme-default .bs-datepicker-body table td span.selected, 
+.theme-default .bs-datepicker-body table td.selected span, 
+.theme-default .bs-datepicker-body table td span[class*="select-"]:after, 
+.theme-default .bs-datepicker-body table td[class*="select-"] span:after {
+  background-color: #9a9a9a !important;
+  border-radius: 15px !important;
+}
+
+.bs-datepicker {
+  box-shadow: none !important;
+}
+
+.cell-span {
+  background-color: #424242;
+}
+.stroke-blue1 {
+  stroke: #add8e6 !important;
+}
+.stroke-yellow1 {
+  stroke: #c0b320 !important;
+}
+.text-fill-yellow1 {
+  fill: #c0b320;
+}
+.stroke-red5 {
+  stroke: #db7093 !important;
+}
